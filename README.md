@@ -33,7 +33,7 @@ This Resource pack changes the texture for swords when you enchant it with Fire 
 ![Netherite Sword Frames](https://cdn.modrinth.com/data/cached_images/ba5e5625177c6d20a33ceebdb966a9138ddc8cf4.png)
 </details>
 
-#
+
 
 <details>
 <summary>Glowing Flaming Swords</summary>
