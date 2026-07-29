@@ -15,8 +15,26 @@
       "link": "projects.html",
       "github": "#",
       "download": "#",
-      "logo": "/assets/flaming-swords/logo.png",
-      "thumbnail": "/assets/flaming-swords/Flaming Swords Banner Blended.png"
+      "logo": "/assets/flaming-swords/pack.png",
+      "banner": "/assets/flaming-swords/Flaming_Swords_Banner_Blended.png"
+    },
+    {
+      "id": "shulker-ui",
+      "title": "Shulker UI",
+      "category": "packs",
+      "categoryLabel": "Resource Pack",
+      "year": "2025",
+      "index": "02",
+      "description": "Makes the Shulker Box UI look nicer",
+      "details": "",
+      "tags": ["Minecraft", "Resource Pack", "Vanilla"],
+      "stats": { "downloads": "19", "likes": "21" },
+      "featured": true,
+      "link": "projects.html",
+      "github": "#",
+      "download": "#",
+      "logo": "/assets/shulker-ui/pack.png",
+      "banner": "/assets/shulker-ui/banner.png"
     }
   ]
 }

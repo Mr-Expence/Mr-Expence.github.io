@@ -645,6 +645,15 @@ button {
 .card__thumb {
   height: 104px;
   position: relative;
+  overflow: hidden;
+}
+
+.card__thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card__thumb::after {
