@@ -14,7 +14,9 @@
       "featured": true,
       "link": "projects.html",
       "github": "#",
-      "download": "#"
+      "download": "#",
+      "logo": "/assets/flaming-swords/logo.png",
+      "thumbnail": "/assets/flaming-swords/Flaming Swords Banner Blended.png"
     }
   ]
 }

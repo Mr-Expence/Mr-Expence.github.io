@@ -1,7 +1,7 @@
 const footerHtml = `<footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
-        <span class="nav__mark">KL</span>
+        <span class="nav__mark"><img src="/assets/Roundedfavicon/android-chrome-512x512.png"></span>
         <p>Game systems, resource packs, and the tools in between. Built one revision at a time.</p>
       </div>
       <div>
@@ -22,7 +22,7 @@ const footerHtml = `<footer class="footer">
       </div>
     </div>
     <div class="container footer__bottom">
-      <p>© <span data-year></span> Kai Lindqvist. All rights reserved.</p>
+      <p>© <span data-year></span> Mr_Expence. All rights reserved.</p>
       <div class="appearance">
         <span class="label-mono">Appearance</span>
         <div class="appearance__switch">

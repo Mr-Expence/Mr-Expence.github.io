@@ -141,7 +141,7 @@ function renderNotFound(container) {
 }
 
 function renderProject(container, project) {
-  document.title = `${project.title} — Kai Lindqvist`;
+  document.title = `${project.title} — Mr_Expence`;
 
   container.innerHTML = `
     <a class="back-link" href="projects.html">${BACK_ICON} All projects</a>
