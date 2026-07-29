@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr_Expence</title>
+  <link rel="stylesheet" href="/style/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/Roundedfavicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/Roundedfavicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/Roundedfavicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/Roundedfavicon/site.webmanifest">
+</head>
+
+<body>
+  <main>
+    <section class="container hero">
+      <div>
+        <p class="eyebrow label-mono">Game developer & digital creator</p>
+        <h1 class="display-l">Building small worlds with exacting parts.</h1>
+        <p class="hero__lede body-l">
+          I design and ship game systems, Minecraft resource packs, and the small tools that make both faster to build.
+          Everything here is a working draft, revised in public.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--filled" href="/projects">View projects</a>
+          <a class="btn btn--outlined" href="/social">Find me elsewhere</a>
+        </div>
+      </div>
+      <div class="hero__cover">
+        <span class="hero__cover-mark"><img src="/assets/flaming-swords/Flaming Swords Banner Blended.png" style="height: 100%; width: auto; object-fit: cover;"></span>
+        <div class="hero__cover-overlay">
+          <p class="title">Flaming Swords</p>
+          <p class="sub">Minecraft · Java · Latest</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow label-mono">Featured</p>
+          <h2 class="headline-l">Recent projects</h2>
+        </div>
+        <a class="btn btn--outlined" href="/projects">All projects</a>
+      </div>
+      <div class="grid" data-featured-grid>
+        <div class="empty-state">Loading projects…</div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <p class="eyebrow label-mono">Build log</p>
+      <h2 class="headline-l" style="margin-bottom: var(--space-6);">Now building</h2>
+      <ul class="list">
+        <li class="list__item">
+          <span class="list__dot" style="background-color: var(--md-sys-color-secondary);"></span>
+          <div class="list__content">
+            <p class="list__title">Godot 4 platformer — win screen and scene transitions</p>
+            <p class="list__meta">Wiring the win condition into Maaack's scene manager</p>
+          </div>
+          <span class="list__trail">REV 06</span>
+        </li>
+        <li class="list__item">
+          <span class="list__dot" style="background-color: var(--md-sys-color-primary);"></span>
+          <div class="list__content">
+            <p class="list__title">Bullet collision layers</p>
+            <p class="list__meta">Fixing false positives between player and police fire</p>
+          </div>
+          <span class="list__trail">REV 04</span>
+        </li>
+        <li class="list__item">
+          <span class="list__dot" style="background-color: var(--md-sys-color-tertiary);"></span>
+          <div class="list__content">
+            <p class="list__title">Blockbench logo animator plugin</p>
+            <p class="list__meta">Exporting keyframed title cards straight to gif</p>
+          </div>
+          <span class="list__trail">REV 02</span>
+        </li>
+        <li class="list__item">
+          <span class="list__dot" style="background-color: var(--md-sys-color-primary);"></span>
+          <div class="list__content">
+            <p class="list__title">Codeforces problem picker widget</p>
+            <p class="list__meta">Rating-matched daily practice, embedded site-wide</p>
+          </div>
+          <span class="list__trail">REV 03</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/navbar.js"></script>
+  <script src="/scripts/footer.js"></script>
+</body>
+
+</html>

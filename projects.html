@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Kai Lindqvist</title>
+  <link rel="stylesheet" href="/style/styles.css">
+</head>
+
+<body>
+  <main>
+    <section class="container page-head">
+      <p class="eyebrow label-mono">Full index</p>
+      <h1 class="display-m">Projects</h1>
+      <p class="body-l">Games, resource packs, and the tools built to support them. Every entry links back to its source
+        or storefront listing.</p>
+    </section>
+
+    <section class="container section" style="padding-top:0;">
+      <div class="chips" role="group" aria-label="Filter projects by category">
+        <button class="chip is-active" data-filter-chip="all">All</button>
+        <button class="chip" data-filter-chip="games">Games</button>
+        <button class="chip" data-filter-chip="packs">Resource Packs</button>
+        <button class="chip" data-filter-chip="tools">Tools</button>
+      </div>
+      <div class="grid" data-projects-grid>
+        <div class="empty-state">Loading projects…</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/navbar.js"></script>
+  <script src="/scripts/footer.js"></script>
+</body>
+
+</html>

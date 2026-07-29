@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "id": "flaming-swords",
+      "title": "Flaming Swords",
+      "category": "packs",
+      "categoryLabel": "Resource Pack",
+      "year": "2025",
+      "index": "01",
+      "description": "Makes the Fire Aspect Enchantment show flames",
+      "details": "",
+      "tags": ["Minecraft", "Resource Pack", "Vanilla"],
+      "stats": { "downloads": "120k", "likes": "48" },
+      "featured": true,
+      "link": "projects.html",
+      "github": "#",
+      "download": "#"
+    }
+  ]
+}
