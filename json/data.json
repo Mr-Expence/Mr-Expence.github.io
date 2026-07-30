@@ -12,9 +12,9 @@
       "tags": ["Minecraft", "Resource Pack", "Vanilla"],
       "stats": { "downloads": "120k", "likes": "48" },
       "featured": true,
-      "link": "projects.html",
+      "link": "/projects/flaming-swords",
       "github": "#",
-      "download": "#",
+      "download": "https://modrinth.com/resourcepack/flaming-swords",
       "logo": "/assets/flaming-swords/pack.png",
       "banner": "/assets/flaming-swords/Flaming_Swords_Banner_Blended.png"
     },
@@ -27,14 +27,32 @@
       "index": "02",
       "description": "Makes the Shulker Box UI look nicer",
       "details": "",
-      "tags": ["Minecraft", "Resource Pack", "Vanilla"],
+      "tags": ["Minecraft", "Resource Pack", "Modded"],
       "stats": { "downloads": "19", "likes": "21" },
       "featured": true,
-      "link": "projects.html",
+      "link": "/projects/shulker-ui",
       "github": "#",
-      "download": "#",
+      "download": "https://modrinth.com/resourcepack/shulker-ui",
       "logo": "/assets/shulker-ui/pack.png",
-      "banner": "/assets/shulker-ui/banner.png"
+      "banner": "/assets/shulker-ui/Shulker_Ui_Banner.png"
+    },
+    {
+      "id": "mr_expences-vanilla-pvp-overlay",
+      "title": "Mr_Expence's PvP Overlay",
+      "category": "packs",
+      "categoryLabel": "Resource Pack",
+      "year": "2025",
+      "index": "03",
+      "description": "My custom vanilla Pvp Overlay for Minecraft with blue cobwebs and other features",
+      "details": "",
+      "tags": ["Minecraft", "Resource Pack", "Vanilla"],
+      "stats": { "downloads": "4.5k", "likes": "3" },
+      "featured": true,
+      "link": "/projects/mr_expences-vanilla-pvp-overlay",
+      "github": "#",
+      "download": "https://modrinth.com/resourcepack/shulker-ui",
+      "logo": "/assets/shulker-ui/pack.png",
+      "banner": "/assets/shulker-ui/Shulker_Ui_Banner.png"
     }
   ]
 }

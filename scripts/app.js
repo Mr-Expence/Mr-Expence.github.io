@@ -40,7 +40,7 @@ const FALLBACK_PROJECTS = [
     "tags": ["Minecraft", "Blockbench", "Animation"],
     "stats": { "downloads": "112k", "likes": "3.4k" },
     "featured": true,
-    "link": "project.html?id=flaming-swords",
+    "link": "/projects/flaming-swords.html",
     "banner": "assets/projects/flaming-swords-banner.jpg",
     "logo": "assets/projects/flaming-swords-logo.png"
   },
