@@ -13,25 +13,24 @@
 </head>
 
 <body>
-  <main>
-    <section class="container page-head">
-      <h1 class="display-m">Projects</h1>
-      <p class="body-l">Games, resource packs, and tools.</p>
-    </section>
 
-    <section class="container section" style="padding-top:0;">
-      <div class="chips" role="group" aria-label="Filter projects by category">
-        <button class="chip is-active" data-filter-chip="all">All</button>
-        <button class="chip" data-filter-chip="games">Games</button>
-        <button class="chip" data-filter-chip="packs">Resource Packs</button>
-        <button class="chip" data-filter-chip="tools">Tools</button>
+  <main class="container">
+    <div class="profile">
+      <div class="profile__avatar"><img src="/assets/Roundedfavicon/android-chrome-512x512.png"></div>
+      <h1 class="headline-l">Mr_Expence</h1>
+      <p class="body-m">Beginner Game developer, Resource Pack Creator</p>
+      <div class="profile__stats">
+        <span><strong>10</strong> projects</span>
+        <span><strong>6</strong> platforms</span>
+        <span><strong>170k+</strong> downloads</span>
       </div>
-      <div class="grid" data-projects-grid>
-        <div class="empty-state">Loading projects…</div>
-      </div>
-    </section>
+    </div>
+
+    <ul class="social-list">
+    </ul>
   </main>
 
+  <script src="/scripts/social-cards.js"></script>
   <script src="/scripts/app.js"></script>
   <script src="/scripts/navbar.js"></script>
   <script src="/scripts/footer.js"></script>

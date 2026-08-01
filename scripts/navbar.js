@@ -8,6 +8,7 @@ const html = `<header class="nav">
         <a class="nav__link" href="/">Home</a>
         <a class="nav__link" href="/projects">Projects</a>
         <a class="nav__link" href="/social">Social</a>
+        <a class="nav__link" href="/codeforces">Codeforces</a>
       </nav>
       <label class="nav__search">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,6 +43,7 @@ const html = `<header class="nav">
         <a class="nav__link" href="/">Home</a>
         <a class="nav__link" href="/projects">Projects</a>
         <a class="nav__link" href="/social">Social</a>
+        <a class="nav__link" href="/codeforces">Codeforces</a>
       </nav>
     </div>
   </header>`;
