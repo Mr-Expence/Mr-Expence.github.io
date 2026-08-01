@@ -211,6 +211,26 @@ function matchesSearch(project, query) {
   return haystack.includes(query.toLowerCase());
 }
 
+function getProjectsPageUrl(query = '') {
+  const basePath = '/projects';
+  const url = new URL(basePath, window.location.origin);
+  if (query) {
+    url.searchParams.set('search', query);
+  }
+  return `${url.pathname}${url.search}`;
+}
+
+function syncSearchQuery(query) {
+  if (!window.location.pathname.includes('/projects')) return;
+  const url = new URL(window.location.href);
+  if (query) {
+    url.searchParams.set('search', query);
+  } else {
+    url.searchParams.delete('search');
+  }
+  window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+}
+
 let allProjects = [];
 let activeCategory = 'all';
 
@@ -219,6 +239,7 @@ function applyProjectFilters() {
   if (!container) return;
   const searchInput = getSearchInput();
   const query = searchInput ? searchInput.value.trim() : '';
+  syncSearchQuery(query);
   const visible = allProjects.filter(
     (p) => (activeCategory === 'all' || p.category === activeCategory) && matchesSearch(p, query)
   );
@@ -274,9 +295,7 @@ function initNavSearch() {
     }
 
     const query = input.value.trim();
-    window.location.href = query
-      ? `projects.html?search=${encodeURIComponent(query)}`
-      : 'projects.html';
+    window.location.assign(getProjectsPageUrl(query));
   });
 }
 
