@@ -44,6 +44,7 @@ const html = `<header class="nav">
         <a class="nav__link" href="/projects">Projects</a>
         <a class="nav__link" href="/social">Social</a>
         <a class="nav__link" href="/codeforces">Codeforces</a>
+        <a class="nav__link" href="/personal-links">Personal Links</a>
       </nav>
     </div>
   </header>`;
