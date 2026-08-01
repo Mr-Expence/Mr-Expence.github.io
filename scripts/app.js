@@ -212,12 +212,12 @@ function matchesSearch(project, query) {
 }
 
 function getProjectsPageUrl(query = '') {
-  const basePath = '/projects';
-  const url = new URL(basePath, window.location.origin);
+  const url = new URL('/projects', window.location.origin);
   if (query) {
     url.searchParams.set('search', query);
   }
-  return `${url.pathname}${url.search}`;
+  const normalizedPath = url.pathname.endsWith('/') && url.pathname !== '/' ? url.pathname.slice(0, -1) : url.pathname;
+  return `${normalizedPath}${url.search}`;
 }
 
 function syncSearchQuery(query) {
@@ -228,7 +228,8 @@ function syncSearchQuery(query) {
   } else {
     url.searchParams.delete('search');
   }
-  window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
+  const normalizedPath = url.pathname.endsWith('/') && url.pathname !== '/' ? url.pathname.slice(0, -1) : url.pathname;
+  window.history.replaceState({}, '', `${normalizedPath}${url.search}${url.hash}`);
 }
 
 let allProjects = [];
@@ -275,16 +276,52 @@ async function initProjectsGrid() {
   applyProjectFilters();
 }
 
+function createSearchResultsList(query) {
+  const trimmed = query.trim();
+  if (!trimmed) return '';
+
+  const matches = allProjects.filter((project) => matchesSearch(project, trimmed)).slice(0, 5);
+  if (matches.length === 0) {
+    return '<li class="nav__search-empty">No matching projects</li>';
+  }
+
+  return matches.map((project) => `
+    <li class="nav__search-result">
+      <a href="${project.link}">
+        <span>${project.title}</span>
+        <small>${project.categoryLabel}</small>
+      </a>
+    </li>
+  `).join('');
+}
+
+function renderSearchResults(query) {
+  const wrapper = document.querySelector('.nav__search-results');
+  if (!wrapper) return;
+  const trimmed = query.trim();
+  wrapper.innerHTML = trimmed ? `<ul>${createSearchResultsList(trimmed)}</ul>` : '';
+  wrapper.classList.toggle('is-visible', Boolean(trimmed));
+}
+
 function initNavSearch() {
   const input = getSearchInput();
   if (!input) return;
 
   const onProjectsGrid = document.querySelector('[data-projects-grid]');
+  const resultsWrapper = document.createElement('div');
+  resultsWrapper.className = 'nav__search-results';
+  input.parentElement.appendChild(resultsWrapper);
 
-  if (onProjectsGrid) {
-    input.addEventListener('input', () => applyProjectFilters());
-  }
+  const updateSearch = () => {
+    const query = input.value.trim();
+    if (onProjectsGrid) {
+      applyProjectFilters();
+    }
+    renderSearchResults(query);
+  };
 
+  input.addEventListener('input', updateSearch);
+  input.addEventListener('focus', updateSearch);
   input.addEventListener('keydown', (event) => {
     if (event.key !== 'Enter') return;
     event.preventDefault();
@@ -296,6 +333,13 @@ function initNavSearch() {
 
     const query = input.value.trim();
     window.location.assign(getProjectsPageUrl(query));
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!resultsWrapper.contains(event.target) && event.target !== input) {
+      resultsWrapper.classList.remove('is-visible');
+      resultsWrapper.innerHTML = '';
+    }
   });
 }
 
