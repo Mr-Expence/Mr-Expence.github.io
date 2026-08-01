@@ -12,7 +12,8 @@ const FALLBACK_PROJECTS = [
     "featured": true,
     "link": "project.html?id=hollow-signal",
     "banner": "assets/projects/hollow-signal-banner.jpg",
-    "logo": "assets/projects/hollow-signal-logo.png"
+    "logo": "assets/projects/hollow-signal-logo.png",
+    "show": true
   },
   {
     "id": "shulker-ui",
@@ -27,7 +28,8 @@ const FALLBACK_PROJECTS = [
     "featured": true,
     "link": "project.html?id=shulker-ui",
     "banner": "assets/projects/shulker-ui-banner.jpg",
-    "logo": "assets/projects/shulker-ui-logo.png"
+    "logo": "assets/projects/shulker-ui-logo.png",
+    "show": true
   },
   {
     "id": "flaming-swords",
@@ -40,9 +42,10 @@ const FALLBACK_PROJECTS = [
     "tags": ["Minecraft", "Blockbench", "Animation"],
     "stats": { "downloads": "112k", "likes": "3.4k" },
     "featured": true,
-    "link": "/projects/flaming-swords.html",
+    "link": "project.html?id=flaming-swords",
     "banner": "assets/projects/flaming-swords-banner.jpg",
-    "logo": "assets/projects/flaming-swords-logo.png"
+    "logo": "assets/projects/flaming-swords-logo.png",
+    "show": true
   },
   {
     "id": "pack-uploader",
@@ -57,7 +60,8 @@ const FALLBACK_PROJECTS = [
     "featured": false,
     "link": "project.html?id=pack-uploader",
     "banner": "assets/projects/pack-uploader-banner.jpg",
-    "logo": "assets/projects/pack-uploader-logo.png"
+    "logo": "assets/projects/pack-uploader-logo.png",
+    "show": true
   },
   {
     "id": "grindset",
@@ -72,7 +76,8 @@ const FALLBACK_PROJECTS = [
     "featured": false,
     "link": "project.html?id=grindset",
     "banner": "assets/projects/grindset-banner.jpg",
-    "logo": "assets/projects/grindset-logo.png"
+    "logo": "assets/projects/grindset-logo.png",
+    "show": true
   },
   {
     "id": "codeforces-picker",
@@ -87,7 +92,8 @@ const FALLBACK_PROJECTS = [
     "featured": false,
     "link": "project.html?id=codeforces-picker",
     "banner": "assets/projects/codeforces-picker-banner.jpg",
-    "logo": "assets/projects/codeforces-picker-logo.png"
+    "logo": "assets/projects/codeforces-picker-logo.png",
+    "show": true
   }
 ];
 
@@ -133,14 +139,19 @@ function initFooterYear() {
   });
 }
 
+function isVisible(project) {
+  return project.show !== false;
+}
+
 async function loadProjects() {
   try {
     const response = await fetch('/json/data.json');
     if (!response.ok) throw new Error('Network response was not ok');
     const data = await response.json();
-    return Array.isArray(data.projects) ? data.projects : FALLBACK_PROJECTS;
+    const projects = Array.isArray(data.projects) ? data.projects : FALLBACK_PROJECTS;
+    return projects.filter(isVisible);
   } catch (error) {
-    return FALLBACK_PROJECTS;
+    return FALLBACK_PROJECTS.filter(isVisible);
   }
 }
 
@@ -264,8 +275,31 @@ function initNavSearch() {
 
     const query = input.value.trim();
     window.location.href = query
-      ? `projects?search=${encodeURIComponent(query)}`
-      : 'projects';
+      ? `projects.html?search=${encodeURIComponent(query)}`
+      : 'projects.html';
+  });
+}
+
+function initCodeCopy() {
+  document.querySelectorAll('.code-block__copy').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const block = button.closest('.code-block');
+      const code = block ? block.querySelector('code') : null;
+      if (!code) return;
+
+      try {
+        await navigator.clipboard.writeText(code.textContent);
+        const originalLabel = button.textContent;
+        button.textContent = 'Copied';
+        button.classList.add('is-copied');
+        setTimeout(() => {
+          button.textContent = originalLabel;
+          button.classList.remove('is-copied');
+        }, 1600);
+      } catch (error) {
+        console.error('Copy failed:', error);
+      }
+    });
   });
 }
 
@@ -276,4 +310,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   initFeaturedGrid();
   await initProjectsGrid();
   initNavSearch();
+  initCodeCopy();
 });

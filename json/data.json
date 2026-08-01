@@ -13,10 +13,11 @@
       "stats": { "downloads": "120k", "likes": "48" },
       "featured": true,
       "link": "/projects/flaming-swords",
-      "github": "#",
+      "github": "https://github.com/Mr-Expence/Flaming-Swords",
       "download": "https://modrinth.com/resourcepack/flaming-swords",
       "logo": "/assets/flaming-swords/pack.png",
-      "banner": "/assets/flaming-swords/Flaming_Swords_Banner_Blended.png"
+      "banner": "/assets/flaming-swords/Flaming_Swords_Banner_Blended.png",
+      "show": true
     },
     {
       "id": "shulker-ui",
@@ -31,10 +32,11 @@
       "stats": { "downloads": "19", "likes": "21" },
       "featured": true,
       "link": "/projects/shulker-ui",
-      "github": "#",
+      "github": "https://github.com/Mr-Expence/Shulker-UI",
       "download": "https://modrinth.com/resourcepack/shulker-ui",
       "logo": "/assets/shulker-ui/pack.png",
-      "banner": "/assets/shulker-ui/Shulker_Ui_Banner.png"
+      "banner": "/assets/shulker-ui/Shulker_Ui_Banner.png",
+      "show": true
     },
     {
       "id": "mr_expences-vanilla-pvp-overlay",
@@ -49,10 +51,49 @@
       "stats": { "downloads": "4.5k", "likes": "3" },
       "featured": true,
       "link": "/projects/mr_expences-vanilla-pvp-overlay",
-      "github": "#",
-      "download": "https://modrinth.com/resourcepack/shulker-ui",
-      "logo": "/assets/shulker-ui/pack.png",
-      "banner": "/assets/shulker-ui/Shulker_Ui_Banner.png"
+      "github": "https://github.com/Mr-Expence/Mr_Expence-s-PvP-Overlay",
+      "download": "https://modrinth.com/resourcepack/mr_expences-pvp-overlay",
+      "logo": "/assets/mr_expences-vanilla-pvp-overlay/pack.png",
+      "banner": "/assets/mr_expences-vanilla-pvp-overlay/Pvp_Overlay_Banner.png",
+      "show": true
+    },
+    {
+      "id": "bare-bones-buttons",
+      "title": "Bare Bones Buttons",
+      "category": "packs",
+      "categoryLabel": "Resource Pack",
+      "year": "2025",
+      "index": "04",
+      "description": "Add the Bare Bone Buttons to the game and nothing else",
+      "details": "",
+      "tags": ["Minecraft", "Resource Pack", "Vanilla"],
+      "stats": { "downloads": "1.2k", "likes": "3" },
+      "featured": true,
+      "link": "/projects/bare-bones-buttons",
+      "github": "https://github.com/Mr-Expence/Bare-Bones-Buttons",
+      "download": "https://modrinth.com/resourcepack/bare-bones-buttons",
+      "logo": "/assets/bare-bones-buttons/pack.png",
+      "banner": "/assets/bare-bones-buttons/Bare_Bone_Buttons_Banner.png",
+      "show": false
+    },
+    {
+      "id": "cosmetics",
+      "title": "Cosmetics+",
+      "category": "packs",
+      "categoryLabel": "Resource Pack",
+      "year": "2026",
+      "index": "05",
+      "description": "Adds custom cosmetic models to the game",
+      "details": "",
+      "tags": ["Minecraft", "Resource Pack", "Vanilla"],
+      "stats": { "downloads": "403", "likes": "3" },
+      "featured": true,
+      "link": "/projects/cosmetics",
+      "github": "https://modrinth.com/resourcepack/cosmetics+",
+      "download": "https://modrinth.com/resourcepack/cosmetics+",
+      "logo": "/assets/cosmetics/pack.png",
+      "banner": "/assets/cosmetics/Cosmetics_Banner.png",
+      "show": true
     }
   ]
 }
