@@ -1,11 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url=/projects/cosmetics.html">
-    <title>Redirecting…</title>
-  </head>
-  <body>
-    <p>Redirecting…</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr_Expence</title>
+  <link rel="stylesheet" href="/style/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/Roundedfavicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/Roundedfavicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/Roundedfavicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/Roundedfavicon/site.webmanifest">
+</head>
+
+<body>
+  <main class="project-page">
+    <section class="project-hero" style="--project-banner: url('/assets/cosmetics/Cosmetics_Banner.png');">
+      <div class="project-hero__banner" aria-hidden="true"></div>
+      <div class="container project-hero__content">
+        <h1 class="display-l">Cosmetics+</h1>
+        <p class="project-hero__summary body-l">Adds custom cosmetic models to the game</p>
+
+        <div class="card__tags project-hero__tags">
+          <span class="tag">Minecraft</span>
+          <span class="tag">Cosmetics</span>
+          <span class="tag">Simplistic</span>
+          <span class="tag">Vanilla</span>
+        </div>
+
+        <div class="project-hero__actions">
+          <a class="btn btn--filled" href="#" data-project-id="ShPJVAhs">Download</a>
+          <a class="btn btn--outlined" href="https://modrinth.com/resourcepack/cosmetics+" target="_blank"
+            rel="noopener">Modrinth</a>
+          <a class="btn btn--outlined" href="https://www.curseforge.com/minecraft/texture-packs/cosmetics"
+            target="_blank" rel="noopener">CurseForge</a>
+          <a class="btn btn--outlined" href="https://github.com/Mr-Expence/Cosmetics" target="_blank"
+            rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section project-content">
+      <div class="project-layout">
+        <article class="project-panel project-panel--primary">
+          <p class="body-m">Cosmetics+ is a Minecraft resource pack that introduces a variety of custom
+            cosmetic models to enhance the game's visual appeal without altering gameplay mechanics. The
+            project is currently in early alpha and requires the "Model Applier" mod for the helmets and
+            armor to function properly, while the "Item Model Browser" is recommended to view all included
+            models. Players can also contribute their own custom models by joining the creator's Discord
+            server.</p>
+        </article>
+        <aside class="project-panel project-panel--side">
+          <p class="label-mono">Details</p>
+          <div class="project-facts">
+            <div class="project-facts__row">
+              <span>Type</span>
+              <strong>Resource Pack</strong>
+            </div>
+            <div class="project-facts__row">
+              <span>Tools</span>
+              <strong>Blockbench</strong>
+            </div>
+            <div class="project-facts__row">
+              <span>Focus</span>
+              <strong>Cosmetics</strong>
+            </div>
+            <div class="project-facts__row">
+              <span>Platforms</span>
+              <strong>Modrinth, CurseForge</strong>
+            </div>
+          </div>
+
+          <p class="label-mono" style="margin-top:var(--space-6);">Dependencies</p>
+          <div class="dependency-list">
+            <a class="dependency-list__item" href="https://modrinth.com/datapack/modelapplier" target="_blank"
+              rel="noopener">
+              <span class="dependency-list__icon"><img
+                  src="https://cdn.modrinth.com/data/UPHTQ3on/b14cf20a50eb561a525e14a1af85589e6710bc42_96.webp"></span>
+              <span class="dependency-list__text">
+                <span class="dependency-list__name">Model Applier</span>
+              </span>
+              <span class="dependency-badge dependency-badge--required">Required</span>
+            </a>
+          </div>
+
+          <div class="project-links" style="margin-top:var(--space-6);">
+            <p class="label-mono">Links</p>
+            <a class="project-link" href="https://github.com/Mr-Expence/Cosmetics" target="_blank" rel="noopener">View
+              source on GitHub</a>
+            <a class="project-link" href="https://modrinth.com/resourcepack/cosmetics+" target="_blank"
+              rel="noopener">Open on Modrinth</a>
+            <a class="project-link" href="https://www.curseforge.com/minecraft/texture-packs/cosmetics" target="_blank"
+              rel="noopener">Open on CurseForge</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container section project-gallery">
+      <h2 class="headline-l" style="margin-bottom:var(--space-6);">Gallery</h2>
+      <div class="gallery">
+        <button class="gallery__item" data-gallery-full="/assets/cosmetics/gallery-1.jpg">
+          <img src="/assets/cosmetics/gray_glasses.png" alt="Cosmetics+ screenshot 1" loading="lazy">
+        </button>
+        <button class="gallery__item" data-gallery-full="/assets/cosmetics/gallery-2.jpg">
+          <img src="/assets/cosmetics/rainbow_tophat.gif" alt="Cosmetics+ screenshot 2" loading="lazy">
+        </button>
+        <button class="gallery__item" data-gallery-full="/assets/cosmetics/gallery-3.jpg">
+          <img src="/assets/cosmetics/red_white_tophat.png" alt="Cosmetics+ screenshot 3" loading="lazy">
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lightbox__close" data-lightbox-close aria-label="Close gallery image">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+      </svg>
+    </button>
+    <img class="lightbox__image" data-lightbox-image src="" alt="">
+  </div>
+
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/navbar.js"></script>
+  <script src="/scripts/footer.js"></script>
+  <script src="/scripts/project_download.js"></script>
+</body>
+
 </html>
