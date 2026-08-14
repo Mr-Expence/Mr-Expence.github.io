@@ -2,7 +2,7 @@ const footerHtml = `<footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
         <span class="nav__mark"><img src="/assets/Roundedfavicon/android-chrome-512x512.png"></span>
-        <p>Game systems, resource packs, and the tools in between. Built one revision at a time.</p>
+        <p>Currently learning how to code and use Unreal Engine. Creating Youtube Videos.</p>
       </div>
       <div>
         <p class="footer__heading">Explore</p>
